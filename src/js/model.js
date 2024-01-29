@@ -12,7 +12,7 @@ export const state = {
     resultsPerPage: RES_PER_PAGE,
   },
   bookmarks: [],
-  shoppingList: [],
+  // shoppingList: [],
 };
 
 const createRecipeObject = function (data) {
@@ -112,6 +112,21 @@ export const deleteBookmark = function (id) {
 
   persistBookmarks();
 };
+
+// export const addShoppingList = function (recipe) {
+//   //add ingredients to shopping List
+//   state.recipe.ingredients.forEach(ing => {
+//     //converts obj into arr
+//     const listIng = Object.values(ing);
+//     const newText = listIng.toString().split(',').join(' ');
+
+//     state.shoppingList.push(newText);
+//     console.log(state.shoppingList);
+//   });
+
+//   //Mark current recipe into the list
+//   if (recipe.id === state.recipe.id) state.recipe.shopListed = true;
+// };
 
 const init = function () {
   const storage = localStorage.getItem('bookmarks');

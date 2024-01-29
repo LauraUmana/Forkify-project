@@ -88,6 +88,11 @@ const controlBookmarks = function () {
   bookmarksView.render(model.state.bookmarks);
 };
 
+// const controlAddShoppingList = function () {
+//   //Add ingredients to shoppingList
+//   model.addShoppingList(model.state.recipe);
+// };
+
 const controlAddRecipe = async function (newRecipe) {
   try {
     // Show loading spinner
@@ -124,6 +129,7 @@ const init = function () {
   recipeView.addHandlerRender(controlRecipes);
   recipeView.addHandlerUpdateServings(controlServings);
   recipeView.addHandlerAddBookmark(controlAddBookmark);
+  // recipeView.addHandlerAddShoppingList(controlAddShoppingList);
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
